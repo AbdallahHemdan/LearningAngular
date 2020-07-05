@@ -1,18 +1,27 @@
 <h1 class="ask-title">Hello, {{ name }} from Ask !</h1>
-<h2>Here is a math operation as a test for Interpolation</h2>
-<h3>{{ 5 * 5 + 5 * 5 }}</h3>
-<h3>{{ "Welcome " + name }}</h3>
-<h3>Omar Hemdan string length is : {{ name.length }}</h3>
-<h3>Current user age is : {{ age }}</h3>
-<h3>username in uppercase : {{ name.toUpperCase() }}</h3>
-<h3>Displaying username using a method : {{ greetUser() }}</h3>
+<input type="text" value="Hemdan" [id]="userId" />
+<input type="text" value="Hemdan" id="{{ userId }}" />
 
-<!-- Things you can't do inside interpolation -->
-<!-- 1. perform assignments -->
-<!-- <h3>{{ a = 2 * 2}}</h3> -->
+<!-- We can bind a property using 2-ways -->
+<!-- 1. using Interpolation {{}} -->
+<!-- 2. using property binding [] -->
 
-<!-- To get the url of the current window, you should get it the class then use it in
-the template -->
-<!-- 2. access global js variables -->
-<!-- <h3>Current location href : {{ window.location.href }}</h3> -->
-<h3>Current location href in right way is : {{ siteUrl }}</h3>
+<!-- But the Interpolation has a limitation that it only works with strings -->
+<!-- For example if we need to bind a boolean property that will not work -->
+
+<!-- ex. -->
+<!-- <input type="text" value="Hemdan" id="{{ userId }}" disabled="{{ false }}" /> -->
+<input
+  type="text"
+  value="Hemdan"
+  id="{{ userId }}"
+  [disabled]="isInputDisabled"
+/>
+
+<!-- there is an alternative way of performing the property binding by using the (bind-) -->
+<input
+  type="text"
+  value="Hemdan"
+  id="{{ userId }}"
+  bind-disabled="isInputDisabled"
+/>

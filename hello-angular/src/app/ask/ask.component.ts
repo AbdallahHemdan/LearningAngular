@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AskComponent implements OnInit {
   public name = 'Omar Hemdan';
-  public age = 21;
-  public siteUrl = window.location.href;
+  public userId = '123456789';
+  public isInputDisabled = false;
+
   constructor() {}
 
   ngOnInit(): void {}
-  greetUser = () => `Hello, ${this.name}`;
 }
