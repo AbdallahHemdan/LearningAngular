@@ -2,26 +2,15 @@
 <p>which used to add or remove from HTML</p>
 <ul>
   <li>ngIf</li>
-  <li>ngSwitch</li>
+  <li>ngSwitch => current</li>
   <li>ngFor</li>
 </ul>
 
-<!-- <h1 *ngIf="showTitle">Hello, ngIf</h1> -->
+<h1>Welcome to ngSwitch</h1>
 
-<!-- ngIf and else -->
-
-<!-- 1st. method -->
-<h2 *ngIf="showTitle; else showHiddenOne">Hello, world</h2>
-<ng-template #showHiddenOne>
-  <h2>Hidden one</h2>
-</ng-template>
-
-<!-- 2nd. method -->
-
-<div *ngIf="showTitle; then thenBlock; else elseBlock"></div>
-<ng-template #thenBlock>Content to render when condition is true.</ng-template>
-<ng-template #elseBlock>Content to render when condition is false.</ng-template>
-
-<div *ngIf="showTitle; then first; else second"></div>
-<ng-template #first> <div>Hi I am show with HEMDAN</div> </ng-template>
-<ng-template #second> <div>Hi I am hide with HEMDAN</div> </ng-template>
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'red'">you selected the red color</div>
+  <div *ngSwitchCase="'blue'">you selected the blue color</div>
+  <div *ngSwitchCase="'green'">you selected the green color</div>
+  <div *ngSwitchDefault>Your selection is totally wrong</div>
+</div>

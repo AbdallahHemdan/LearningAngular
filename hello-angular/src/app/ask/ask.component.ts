@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { componentFactoryName } from '@angular/compiler';
 
 @Component({
   selector: 'app-ask',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AskComponent implements OnInit {
   public showTitle = false;
+  public color = 'green';
 
   constructor() {}
 
