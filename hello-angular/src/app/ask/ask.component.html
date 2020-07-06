@@ -1,6 +1,8 @@
 <h1>Hello, {{ name }}</h1>
-<button (click)="sayHello()">Say hello</button>
-<button (click)="logEvent($event)">
-  log the event
-</button>
-<h2 [ngStyle]="{ color: 'red' }">{{ greetingMessage }}</h2>
+<h2>Here we will learn more about TEMPLATE REFERENCE VARIABLES</h2>
+
+<input #username type="text" />
+<button (click)="showUsername(username)">Show username</button>
+
+<h2 #title>Another usage of template reference variables</h2>
+<button (click)="logTitle(title)">Log title</button>
