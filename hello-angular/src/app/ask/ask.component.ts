@@ -7,9 +7,17 @@ import { componentFactoryName } from '@angular/compiler';
   styleUrls: ['./ask.component.scss'],
 })
 export class AskComponent implements OnInit {
-  public showTitle = false;
-  public color = 'green';
-
+  public prices = [
+    'nnfrejk',
+    'fkmrf',
+    'kfnrek',
+    'fjkrnf',
+    'nnfrejk',
+    'fkmrf',
+    'kfnrek',
+    'fjkrnf',
+  ];
+  public name = '';
   constructor() {}
 
   ngOnInit(): void {}

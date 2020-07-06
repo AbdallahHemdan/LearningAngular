@@ -2,15 +2,45 @@
 <p>which used to add or remove from HTML</p>
 <ul>
   <li>ngIf</li>
-  <li>ngSwitch => current</li>
-  <li>ngFor</li>
+  <li>ngSwitch</li>
+  <li>ngFor => current</li>
 </ul>
 
-<h1>Welcome to ngSwitch</h1>
+<h1>Welcome to ngFor</h1>
 
-<div [ngSwitch]="color">
-  <div *ngSwitchCase="'red'">you selected the red color</div>
-  <div *ngSwitchCase="'blue'">you selected the blue color</div>
-  <div *ngSwitchCase="'green'">you selected the green color</div>
-  <div *ngSwitchDefault>Your selection is totally wrong</div>
-</div>
+<h2>without using the index of the current item</h2>
+<ul>
+  <li *ngFor="let price of prices">
+    {{ price }}
+  </li>
+</ul>
+
+<h2>with using the index of the current item</h2>
+<ul>
+  <li *ngFor="let item of prices; index as itemNo">
+    {{ item }}, at [{{ itemNo }}]
+  </li>
+</ul>
+
+<h2>
+  with using the (index) and (first of) and (last of) and (odd) and (even)the
+  current item
+</h2>
+<ul>
+  <li
+    *ngFor="
+      let item of prices;
+      index as i;
+      first as f;
+      last as l;
+      odd as o;
+      even as e;
+      count as cnt
+    "
+  >
+    <span>element value : {{ item }}</span> | <span>is odd : {{ o }}</span> |
+    <span>is even : {{ e }}</span> | <span>is first item : {{ f }}</span> |
+    <span>is last item : {{ l }}</span> | <span>index of item : {{ i }}</span> |
+    <span>the number of items in the list : {{ cnt }}</span>
+  </li>
+</ul>
