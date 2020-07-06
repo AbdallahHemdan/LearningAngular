@@ -1,25 +1,27 @@
-<h1>Hello to our form</h1>
+<h1>Structural directives</h1>
+<p>which used to add or remove from HTML</p>
+<ul>
+  <li>ngIf</li>
+  <li>ngSwitch</li>
+  <li>ngFor</li>
+</ul>
 
-<!-- If ngModel is used within a form tag, either the name attribute must be set or
-the form control must be defined as 'standalone' in ngModelOptions. Example 1:
-<input [(ngModel)]="person.firstName" name="first" /> Example 2:
-<input [(ngModel)]="person.firstName" [ngModelOptions]="{ standalone: true }" /> -->
+<!-- <h1 *ngIf="showTitle">Hello, ngIf</h1> -->
 
-<form action="">
-  <input
-    type="text"
-    placeholder="please enter your name"
-    [(ngModel)]="name"
-    [ngModelOptions]="{ standalone: true }"
-  />
-  <input
-    type="email"
-    placeholder="please enter your mail"
-    [(ngModel)]="email"
-    [ngModelOptions]="{ standalone: true }"
-  />
-</form>
+<!-- ngIf and else -->
 
-<hr />
-<h1>Your name : {{ name }}</h1>
-<h1>Your email : {{ email }}</h1>
+<!-- 1st. method -->
+<h2 *ngIf="showTitle; else showHiddenOne">Hello, world</h2>
+<ng-template #showHiddenOne>
+  <h2>Hidden one</h2>
+</ng-template>
+
+<!-- 2nd. method -->
+
+<div *ngIf="showTitle; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>Content to render when condition is true.</ng-template>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
+
+<div *ngIf="showTitle; then first; else second"></div>
+<ng-template #first> <div>Hi I am show with HEMDAN</div> </ng-template>
+<ng-template #second> <div>Hi I am hide with HEMDAN</div> </ng-template>

@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ask.component.scss'],
 })
 export class AskComponent implements OnInit {
-  public name = '';
-  public email = '';
+  public showTitle = false;
 
   constructor() {}
 

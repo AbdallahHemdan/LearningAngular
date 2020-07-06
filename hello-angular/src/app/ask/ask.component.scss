@@ -9,3 +9,19 @@
 .text-special {
   font-style: italic;
 }
+
+ul {
+  list-style-type: none;
+  text-align: center;
+  margin: auto;
+  li {
+    color: #f00;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  li::before,
+  li::after {
+    content: " * ";
+    color: #000;
+  }
+}
