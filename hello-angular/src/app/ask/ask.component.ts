@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AskComponent implements OnInit {
   public name = 'Omar Hemdan';
-  public hasError = false;
-  public highlightedColor = 'blue';
-  public mainTitleStyles = {
-    color: 'red',
-    fontWeight : 600,
-    fontStyle : "italic"
+  public greetingMessage = '';
+  sayHello = () => {
+    console.log(`Hello, ${this.name}`);
+    this.greetingMessage = `Hello, ${this.name}`;
   };
-
+  logEvent = (event: any) => {
+    console.log(event);
+  };
   constructor() {}
 
   ngOnInit(): void {}
