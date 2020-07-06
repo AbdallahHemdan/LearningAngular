@@ -6,16 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ask.component.scss'],
 })
 export class AskComponent implements OnInit {
-  public name = 'Omar Hemdan';
+  public name = '';
+  public email = '';
 
   constructor() {}
 
   ngOnInit(): void {}
-  showUsername = (username: any) => {
-    console.log(username.value);
-  };
-
-  logTitle = (title: any) => {
-    console.log(title);
-  };
 }

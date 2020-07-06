@@ -1,8 +1,25 @@
-<h1>Hello, {{ name }}</h1>
-<h2>Here we will learn more about TEMPLATE REFERENCE VARIABLES</h2>
+<h1>Hello to our form</h1>
 
-<input #username type="text" />
-<button (click)="showUsername(username)">Show username</button>
+<!-- If ngModel is used within a form tag, either the name attribute must be set or
+the form control must be defined as 'standalone' in ngModelOptions. Example 1:
+<input [(ngModel)]="person.firstName" name="first" /> Example 2:
+<input [(ngModel)]="person.firstName" [ngModelOptions]="{ standalone: true }" /> -->
 
-<h2 #title>Another usage of template reference variables</h2>
-<button (click)="logTitle(title)">Log title</button>
+<form action="">
+  <input
+    type="text"
+    placeholder="please enter your name"
+    [(ngModel)]="name"
+    [ngModelOptions]="{ standalone: true }"
+  />
+  <input
+    type="email"
+    placeholder="please enter your mail"
+    [(ngModel)]="email"
+    [ngModelOptions]="{ standalone: true }"
+  />
+</form>
+
+<hr />
+<h1>Your name : {{ name }}</h1>
+<h1>Your email : {{ email }}</h1>
