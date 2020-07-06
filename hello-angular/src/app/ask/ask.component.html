@@ -1,46 +1,19 @@
-<h1>Structural directives</h1>
-<p>which used to add or remove from HTML</p>
-<ul>
-  <li>ngIf</li>
-  <li>ngSwitch</li>
-  <li>ngFor => current</li>
-</ul>
-
-<h1>Welcome to ngFor</h1>
-
-<h2>without using the index of the current item</h2>
-<ul>
-  <li *ngFor="let price of prices">
-    {{ price }}
-  </li>
-</ul>
-
-<h2>with using the index of the current item</h2>
-<ul>
-  <li *ngFor="let item of prices; index as itemNo">
-    {{ item }}, at [{{ itemNo }}]
-  </li>
-</ul>
-
+<h1>Hello World</h1>
+<p>
+  Here we are trying to make an interaction between the components
+  (child-parent) by sending and receiving data from each others we will use
+  @Input() and @Output() decorators
+</p>
 <h2>
-  with using the (index) and (first of) and (last of) and (odd) and (even)the
-  current item
+  In this example we are using Input decorator to send data from the parent
+  component and receive it in the child component
 </h2>
-<ul>
-  <li
-    *ngFor="
-      let item of prices;
-      index as i;
-      first as f;
-      last as l;
-      odd as o;
-      even as e;
-      count as cnt
-    "
-  >
-    <span>element value : {{ item }}</span> | <span>is odd : {{ o }}</span> |
-    <span>is even : {{ e }}</span> | <span>is first item : {{ f }}</span> |
-    <span>is last item : {{ l }}</span> | <span>index of item : {{ i }}</span> |
-    <span>the number of items in the list : {{ cnt }}</span>
-  </li>
-</ul>
+
+<h1>
+  data received : 1. username : {{ username }} and he has {{ userAge }} years
+  old
+</h1>
+
+<button (click)="fireEvent()">
+  I am a button to fire event to sent data to parent component
+</button>
