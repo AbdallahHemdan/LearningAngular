@@ -1,46 +1,11 @@
-<!-- hard coded class names -->
-<h3>using hard coded class names</h3>
-<h1 class="text-success">Hello, {{ name }} from Ask with success!</h1>
-<h1 class="text-danger">Hello, {{ name }} from Ask with danger!</h1>
-<h1 class="text-special">Hello, {{ name }} from Ask with special!</h1>
+<h1 [style.color]="'orange'">{{name}}</h1>
+<h2 [style.color]="hasError ? 'red' : 'green'">Hello, World</h2>
+<h2 [style.color]="highlightedColor">binding the value of the color </h2>
 
-<hr />
 
-<!-- class binding -->
-<h3>using class binding</h3>
-<h1 [class]="successClass">Hello, {{ name }} from Ask with success!</h1>
-<h1 [class]="dangerClass">Hello, {{ name }} from Ask with danger!</h1>
-<h1 [class]="specialClass">Hello, {{ name }} from Ask with special!</h1>
+<!-- using ngStyle directive -->
 
-<hr />
-<!-- what if we want to use class attribute and class binding at the same html element -->
-<h1 class="text-special" [class]="dangerClass">
-  Hello, I'm a mix of regular class and class binding
-</h1>
 
-<h1 [class.text-success]="isSuccess" class="text-special">
-  Success
-</h1>
 
-<hr />
-<h3>Using [ngClass] to use multiple classes based on conditions</h3>
-<!-- <some-element [ngClass]="{'first': true, 'second': true, 'third': false}">...</some-element> -->
-<h1
-  [ngClass]="{
-    'text-success': isSuccess,
-    'text-special': isSpecial,
-    'text-danger': isError
-  }"
->
-  Using ng-class
-</h1>
-
-<!-- <some-element [ngClass]="'first second'">...</some-element> -->
-<h2 [ngClass]="'text-success text-special'">
-  Using ngClass with string classes instead of object
-</h2>
-
-<!-- <some-element [ngClass]="['first', 'second']">...</some-element> -->
-<h2 [ngClass]="['text-danger', 'text-special']">
-  Using ngClass with array classes instead of object
-</h2>
+<h1 [ngStyle]="mainTitleStyles">all the styles of this title is applied using ngStyle directive</h1>
+<h1 [ngStyle]="{color: 'blue', fontWeight: 600, fontStyle: 'italic'}">all the styles of this title is applied using ngStyle directive</h1>

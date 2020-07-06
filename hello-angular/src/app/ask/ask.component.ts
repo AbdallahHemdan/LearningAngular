@@ -7,14 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AskComponent implements OnInit {
   public name = 'Omar Hemdan';
-  public userId = '123456789';
-  public isInputDisabled = false;
-  public successClass = 'text-success';
-  public dangerClass = 'text-danger';
-  public specialClass = 'text-special';
-  public isSuccess = false;
-  public isError = !this.isSuccess;
-  public isSpecial = true;
+  public hasError = false;
+  public highlightedColor = 'blue';
+  public mainTitleStyles = {
+    color: 'red',
+    fontWeight : 600,
+    fontStyle : "italic"
+  };
 
   constructor() {}
 
