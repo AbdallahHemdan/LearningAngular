@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { EmployeeService } from '../employee.service';
 
 @Component({
   selector: 'app-ask-with-details',
@@ -9,13 +10,10 @@ import { Component, OnInit } from '@angular/core';
   ],
 })
 export class AskWithDetailsComponent implements OnInit {
-  public employees: object = [
-    { id: 1, name: 'Abdallah Hemdan', age: 21 },
-    { id: 2, name: 'Omar Hemdan', age: 11 },
-    { id: 3, name: 'Mohamed Hemdan', age: 8 },
-    { id: 4, name: 'Rokia Hemdan', age: 5 },
-  ];
-  constructor() {}
+  public employees = [];
+  constructor(private _employeeService: EmployeeService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.employees = this._employeeService.getEmployees();
+  }
 }
