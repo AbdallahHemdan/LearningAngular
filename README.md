@@ -26,6 +26,25 @@
 > List of courses and topics I learned in Angular
 
 - [x] Learning Angular Essentials
+  - [x] Introduction about Angular
+  - [x] Simple Hello World application
+  - [x] Components
+  - [x] Interpolation
+  - [x] Property Binding
+  - [x] Class Binding
+  - [x] Style Binding
+  - [x] Event Binding
+  - [x] Template reference variables
+  - [x] Two way binding
+  - [x] ngIf directive
+  - [x] ngSwitch directive
+  - [x] ngFor directive
+  - [x] Components interaction
+  - [x] Pipes
+  - [x] Services
+  - [x] Dependency Injection
+  - [x] Using Services
+  - [x] HTTP and Observables
 - [x] Learning Typescript
 
 ### Project
