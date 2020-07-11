@@ -7,31 +7,13 @@ import { componentFactoryName } from '@angular/compiler';
   styleUrls: ['./ask.component.scss'],
 })
 export class AskComponent implements OnInit {
-  public prices = [
-    'nnfrejk',
-    'fkmrf',
-    'kfnrek',
-    'fjkrnf',
-    'nnfrejk',
-    'fkmrf',
-    'kfnrek',
-    'fjkrnf',
-  ];
-  public name = '';
-  @Input() public username;
+  public message = 'Abdallah hemdan';
+  public person: object = {
+    name: 'Abdallah Hemdan',
+    age: 21,
+  };
 
-  // We can use a different name of the prop name
-  @Input('age') public userAge;
-  @Output() public childEvent = new EventEmitter();
+  public date = new Date();
   constructor() {}
-
   ngOnInit(): void {}
-  logProps = () => {
-    console.log(this.username);
-  };
-
-  fireEvent = () => {
-    console.log('Hello, from fireEvent');
-    this.childEvent.emit('Hello, Hemdan from ask-(child)-component');
-  };
 }
