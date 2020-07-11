@@ -7,13 +7,12 @@ import { componentFactoryName } from '@angular/compiler';
   styleUrls: ['./ask.component.scss'],
 })
 export class AskComponent implements OnInit {
-  public message = 'Abdallah hemdan';
-  public person: object = {
-    name: 'Abdallah Hemdan',
-    age: 21,
-  };
-
-  public date = new Date();
+  public employees: object = [
+    { id: 1, name: 'Abdallah Hemdan', age: 21 },
+    { id: 2, name: 'Omar Hemdan', age: 11 },
+    { id: 3, name: 'Mohamed Hemdan', age: 8 },
+    { id: 4, name: 'Rokia Hemdan', age: 5 },
+  ];
   constructor() {}
   ngOnInit(): void {}
 }
